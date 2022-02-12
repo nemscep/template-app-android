@@ -39,6 +39,11 @@ android {
 
     buildFeatures {
         viewBinding true
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.1.0"
     }
 
     kotlinOptions {
@@ -55,11 +60,35 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
+    // Jetpack Compose
+    def compose_version = "1.1.0"
+
+    implementation("androidx.compose.animation:animation-core:$compose_version")
+    implementation("androidx.compose.animation:animation:$compose_version")
+    implementation("androidx.compose.ui:ui:$compose_version")
+    implementation("androidx.compose.foundation:foundation:$compose_version")
+    implementation("androidx.compose.ui:ui-geometry:$compose_version")
+    implementation("androidx.compose.ui:ui-graphics:$compose_version")
+    implementation("androidx.compose.foundation:foundation-layout:$compose_version")
+    implementation("androidx.compose.runtime:runtime-livedata:$compose_version")
+    implementation("androidx.compose.material:material:$compose_version")
+    implementation("androidx.compose.material:material-icons-core:$compose_version")
+    implementation("androidx.compose.material:material-icons-extended:$compose_version")
+    implementation("androidx.compose.runtime:runtime-rxjava2:$compose_version")
+    implementation("androidx.compose.ui:ui-text:$compose_version")
+    implementation("androidx.compose.ui:ui-util:$compose_version")
+    implementation("androidx.compose.ui:ui-viewbinding:$compose_version")
+    implementation("androidx.compose.ui:ui-tooling:$compose_version")
+    implementation("androidx.activity:activity-compose:1.4.0")
+
+    //Compose Constraintlayout
+    implementation("androidx.constraintlayout:constraintlayout-compose:1.0.0")
+
     // Jetpack navigation
     def nav_version = "2.4.1"
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
-    implementation "androidx.navigation:navigation-compose:2.4.0"
+    implementation "androidx.navigation:navigation-compose:$nav_version"
 
     // Activity Result
     def activity_version = "1.4.0"
