@@ -138,6 +138,9 @@ dependencies {
     implementation("com.squareup.okhttp3:okhttp")
     implementation("com.squareup.okhttp3:logging-interceptor")
 
+    // Burrito
+    implementation 'com.github.nemscep:burrito:v1.0.0'
+
     // Tests
     testImplementation 'junit:junit:4.+'
     testImplementation "org.mockito:mockito-kotlin:4.0.0"
